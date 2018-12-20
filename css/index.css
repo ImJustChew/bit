@@ -1,0 +1,809 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'SFPro Regular';
+    font-size: 10px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    transition: 0.3s;
+    max-width: 100%;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+* {
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+@font-face {
+    font-family: 'Product Sans Regular';
+    src: url("../fonts/Product-Sans-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Product Sans Bold';
+    src: url("../fonts/Product-Sans-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'SFPro Regular';
+    src: url("../fonts/SFProDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'SFPro Semibold';
+    src: url("../fonts/SFProDisplay-Semibold.ttf");
+}
+@font-face {
+    font-family: 'SFPro Bold';
+    src: url("../fonts/SFProDisplay-Bold.ttf");
+}
+@font-face {
+    font-family: 'SFProText Regular';
+    src: url("../fonts/SFProText-Regular.ttf");
+}
+@font-face {
+    font-family: 'SFProText Semibold';
+    src: url("../fonts/SFProText-Semibold.ttf");
+}
+
+.fadeIn {
+    transition: 0.4s;
+    opacity: 1 !important;
+}
+
+.fadeOut {
+    transition: 0.4s;
+    opacity: 0 !important;
+}
+
+.header {
+    text-align: left;
+    height: 15%;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 7;
+}
+
+.contents {
+    height: 100%;
+    width: 100%;
+    z-index: 6;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cec-logo {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 90%;
+    width: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pill-button {
+    text-decoration: none;
+    font-weight: 600;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 46px;
+    margin-top: 40px;
+    padding: 0 23px;
+    border-radius: 46px;
+    border: 2px solid black;
+    -webkit-transition: cubic-bezier(0.4, 0, 0.6, 1);
+    transition: cubic-bezier(0.4, 0, 0.6, 1);
+    cursor:pointer;
+}
+
+.pill-text{
+  font-size: 17px;
+  font-family: 'SFProText Regular';
+  color: black;
+  position:relative;
+}
+
+.pill-button .pill-text {
+    color: black;
+    -webkit-transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1);
+    transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1)
+}
+
+a.pill-button:hover,button.pill-button:hover {
+    background: black;
+    -webkit-transition: 300ms background cubic-bezier(0.4, 0, 0.6, 1);
+    transition: 300ms background cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+a.pill-button:hover .pill-text,button.pill-button:hover .pill-text {
+    color: #FFF;
+    text-decoration: none;
+    -webkit-transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1);
+    transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1)
+}
+
+.login-button {
+  margin-right: 5%;
+    text-decoration: none;
+    font-weight: 600;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 46px;
+    margin-top: 40px;
+    padding: 0 23px;
+    border-radius: 46px;
+    border: 2px solid white;
+    -webkit-transition: cubic-bezier(0.4, 0, 0.6, 1);
+    transition: cubic-bezier(0.4, 0, 0.6, 1);
+    cursor:pointer;
+}
+
+.login-text{
+  font-size: 17px;
+  font-family: 'SFProText Regular';
+  color: white;
+  position:relative;
+}
+
+.login-button .login-text {
+    color: white;
+    -webkit-transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1);
+    transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1)
+}
+
+a.login-button:hover,button.login-button:hover {
+    background: white;
+    -webkit-transition: 300ms background cubic-bezier(0.4, 0, 0.6, 1);
+    transition: 300ms background cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+a.login-button:hover .login-text,button.login-button:hover .login-text {
+    color: black;
+    text-decoration: none;
+    -webkit-transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1);
+    transition: 300ms color cubic-bezier(0.4, 0, 0.6, 1)
+}
+
+.home,.about,.goal,.services,.contact,.latest {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    background-color: #F5F5F5;
+    z-index: 1;
+    position: relative;
+}
+
+.achievements {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  background-color: #F5F5F5;
+  z-index: 1;
+  position: relative;
+}
+
+.home-color {
+  text-align: center;
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("../img/cover.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.about-color {
+  background-image: linear-gradient(black, #F5F6F6);
+}
+
+.footer {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+}
+
+.contact-content {
+    height: 70%;
+    width: 90%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.services-content {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.about-content {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.home-content {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.home-content-box {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+    text-align: center;
+}
+
+.home-title {
+    font-family: 'SFPro Semibold';
+    font-size: 8rem;
+    color: #FFFFFF
+
+}
+
+.home-break {
+    height: 6rem;
+    width: 100%;
+}
+
+.home-desc {
+    font-family: 'SFPro Semibold';
+    font-size: 3rem;
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+.about-learn-more {
+  opacity: 0;
+}
+
+.about-image-box {
+    height: 100%;
+    width: 85%;
+    display: inline-block;
+}
+
+.about-image {
+    height: 100%;
+    width: 40%;
+    text-align: right;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about-menu {
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+    text-align: left;
+}
+
+.about-menu-container {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about-history {
+    opacity: 0;
+    font-family: 'SFPro Semibold';
+    font-size: 4rem;
+    padding: 1.5rem 0;
+    transition: 0.3s;
+}
+
+.aboutmenuoptionactive {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.about-image-layers {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.about-l3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-color: transparent;
+    z-index: 3;
+    opacity: 0;
+    transition: 0.3s;
+    background-image: url("../img/cec-robot.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.goal-content {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.goal-content-text {
+    display: inline-block;
+    height: auto;
+    width: 70%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+
+}
+
+.goal-text-nofill {
+  font-family: "SFPro Bold";
+  font-size: 5.5rem;
+}
+
+.goal-text {
+  font-family: "SFPro Bold";
+  font-size: 5.5rem;
+  background-image: url("../img/background-1121216_1280.jpg");
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.achievements-content {
+    height: 100%;
+    width: 80%;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    text-align: center;
+    margin: 10%;
+}
+
+.achievements-left {
+    height: 100%;
+    width: 40%;
+    text-align: left;
+    vertical-align: top;
+    display:inline-block;
+}
+
+.achievements-left-text {
+  font-family: "SFPro Semibold";
+  font-size: 4rem;
+}
+
+.achievements-left-total {
+  font-family: "SFPro Semibold";
+  margin-top:10%;
+  font-size: 4rem;
+  display: inline-block;
+}
+
+.achievements-left-total-num {
+  font-family: "SFPro Semibold";
+  margin-top:10%;
+  margin-right:2%;
+  font-size: 6rem;
+  display:inline-block;
+  background-image: url("../img/background-1121216_1280.jpg");
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.achievements-right {
+    height: 100%;
+    width: 50%;
+    text-align: left;
+    vertical-align: top;
+    display:inline-block;
+}
+
+.achievements-list-item {
+  height:30%;
+  width: 100%;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.list-title {
+  font-family: "SFPro Semibold";
+  font-size: 2.5rem;
+}
+
+.list-desc {
+  font-family: "SFPro Regular";
+  font-size: 2rem;
+}
+
+.service-content-text {
+  font-family: "SFPro Bold";
+  font-size: 8rem;
+  background-image: url("../img/background-1121216_1280.jpg");
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.services-content-content {
+  opacity: 0;
+  height: 100%;
+  width:90%;
+}
+
+.services-desc {
+    height: 100%;
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.service-desc-l1,.service-desc-l2,.service-desc-l3,.service-desc-l4 {
+    height: 23%;
+    width:  100%;
+    cursor: pointer;
+}
+
+.servicemenuoptionactive {
+    transition: 0.3s;
+    opacity: 1;
+    transform:scale(1.02);
+}
+
+.service-list-box {
+    display: table;
+    height:100%;
+    width:100%;
+    padding: 0;
+    text-align:left;
+}
+.service-list {
+    display: table-row;
+}
+
+.services-image {
+    height: 100%;
+    width: 55%;
+    display: inline-block;
+    text-align: center;
+}
+
+.services-image-box {
+    height: 90%;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.services-l1 {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/Laser-Cutter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.services-l2 {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../img/3D-Printer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+.services-l3 {
+    opacity: 0;
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    background: url("../img/woodworking.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.services-l4 {
+    opacity: 0;
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    background: url("../img/pcb.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.services-desc-title {
+    height: auto;
+    width: 100%;
+    /* opacity: 0.3; */
+    text-align: left;
+}
+
+.services-desc-desc {
+    height: auto;
+    /* opacity: 0.3; */
+    text-align: left;
+}
+
+.grey-out {
+  opacity: 0.3;
+}
+
+.services-desc-title-text {
+    font-family: 'SFPro Bold';
+    height: auto;
+    width: 100%;
+    margin-left: 15%;
+    font-size: 5rem;
+    display: inline-block;
+    position:relative;
+    top: 50%;
+    transform: translateY(-30%);
+}
+
+.services-desc-desc-text {
+    margin-left: 15%;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.services-optionmenu-content {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 15%;
+}
+
+.sop1 {
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    margin: 0 1rem;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 0.5rem;
+}
+
+.latest-content {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.latest-container-box {
+  height:70%;
+  width:90%;
+  display:inline-block;
+  text-align: center;
+  transform: translateY(25%);
+}
+
+.latest-content_left {
+  height:100%;
+  width:45%;
+  margin-right: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)),url("../img/bitcoin.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display:inline-block;
+  transition: transform .2s;
+
+}
+.latest-content_left:hover {
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.content-title {
+  width:100%;
+  font-family: "SFPro Semibold";
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  display:inline-block;
+  margin-top: 50px;
+}
+.content-desc {
+  font-family: "SFPro Regular";
+  font-size: 30px;
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+  display:inline-block;
+}
+
+.latest-content_right {
+  height:100%;
+  width:45%;
+  margin-left: 10px;
+  background-image: linear-gradient(rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)),url("../img/miner.jpg");
+  background-position: center;
+  background-size: cover;
+  display:inline-block;
+  transition: transform .2s;
+}
+
+.latest-content_right:hover {
+    transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.footer-box {
+    height: 100%;
+    width: 100%;
+    background-color: #212121;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.footer-box-container {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-box-container img {
+    height: 11rem;
+    width: auto;
+}
+
+.footer-content-1 {
+    height: auto;
+    color: white;
+    font-family: 'SFPro Bold';
+    font-size: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+}
+.footer-content-15 {
+  height:auto;
+  color:white;
+  font-family: 'SFPro Regular';
+  font-size: 1.5rem;
+}
+
+.footer-content-2,.footer-content-3 {
+    height: auto;
+    color: white;
+    font-family: 'SFPro Bold';
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.footer-content-links {
+    height: 10rem;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.footer-content-links img {
+    height: 50%;
+    width: auto;
+    margin: 0 1rem;
+}
+
+.invert {
+  -webkit-filter: invert(1);
+   filter: invert(1);
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: 25px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+@media only screen and (max-width:620px) {
+  /* For mobile phones: */
+  .about-image, .about-menu,.achievements-left,.achievements-right,.latest-content_left,.latest-content_right,.contact-left,.contact-right {
+    width:100%;
+  }
+  .mobile {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Creative Electronics Club</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" initial-scale="1"/>
+        <meta charset="utf-8"/>
+        <link rel="icon" href="./img/cec-logo_overlay2.png"/>
+        <link rel="stylesheet" href="./css/index.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
+    </head>
+    <body class="body">
+        <div class="header">
+            <img src="./img/cec-logo-white.png" class="cec-logo"/>
+            <a onClick="checkLoginStatus()" class="login-button" style="float:right">
+              <span class="login-text">Log in</span>
+            </a>
+        </div>
+        <div class="contents">
+            <div class="home home-color">
+                <div class="home-content">
+                    <div class="home-content-box">
+                        <div class="home-title home-title-a">&nbsp;</div>
+                        <div class="home-title home-title-b">&nbsp;</div>
+                        <div class="home-break"></div>
+                        <div class="home-desc" onClick="notaneasteregg()">
+                            Creative Electronics Club
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about">
+                <div class="about-content">
+                  <div class="about-menu">
+                    <div class="about-menu-container">
+                        <div class="about-history">Founded in 2014 by enthusiastic parents, CEC never ceases to amaze.</div>
+                        <a href="about.html" class="pill-button about-learn-more">
+                          <span class="pill-text">Read more</span>
+                        </a>
+                    </div>
+                  </div>
+                  <div class="about-image">
+                      <div class="about-image-box">
+                          <div class="about-image-layers">
+                              <div class="about-l3"></div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="goal">
+              <div class="goal-content">
+                <div class="goal-content-text">
+                  <div class="goal-text">
+                    CEC aims to develop students’ interest in electronics. An open-minded culture allows us to consistently achieve new heights.
+                  </div>
+                  <a href="activity.html" class="pill-button">
+                    <span class="pill-text">Learn more</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="achievements">
+              <div class="achievements-content">
+                <div class="achievements-left">
+                  <div class="achievements-left-text">
+                    Achievements, fear not. <br/>A representation of our members’ skills.
+                  </div>
+                  <div class="achievements-left-total-num">
+                    60
+                  </div>
+                  <div class="achievements-left-total">
+                     total awards
+                  </div>
+                </div>
+                <div class="achievements-right">
+                  <ul style="list-style-type:none" class="mobile">
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">ASEAN Students Science Project Competition</div>
+                        <div class="list-desc">Overall Best Project, Champion, 2x 1st Runner Up, Representative</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">Taiwan Creative Innovation Competition</div>
+                        <div class="list-desc">2nd Runner Up, 2x Award of Excellence</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">Tan Kah Kee Inventors’ Award</div>
+                        <div class="list-desc">3 Years Continuous Best School Award</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">ACCCIM STI Competition</div>
+                        <div class="list-desc">Champion, 2x 1st Runner Up, 2nd Runner Up, 2 Merit</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">Keysight iCipta Competition</div>
+                        <div class="list-desc">Champion, 1nd Runner Up, Finalist</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">Digital Ninja Programme</div>
+                        <div class="list-desc">Top 8 Teams, Top 15 Teams</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">#mydigitalmaker Global Challenge</div>
+                        <div class="list-desc">Representative of Malaysia to Silicon Valley </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="achievements-list-item">
+                        <div class="list-title">KLESF International Challenge</div>
+                        <div class="list-desc">Champion, 4x Bronze Award</div>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="achievements.html" class="pill-button" style="margin-top: 20px">
+                        <span class="pill-text">View All</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="services" class="services">
+                <div class="services-content">
+                  <div class="service-content-text">
+                    Our Equipment
+                  </div>
+                  <div class="services-content-content">
+                    <div class="services-desc">
+                      <ul class="service-list-box">
+                        <li class="service-list">
+                          <div class="service-desc-l1 grey-out" onClick="setServiceMenu(1)">
+                            <div class="services-desc-title "><div class="services-desc-title-text">Laser Cutter</div></div>
+                            <div class="services-desc-desc"><div class="services-desc-desc-text">Industry-grade laser cutting with micrometer precision</div></div>
+                          </div>
+                        </li>
+                        <li class="service-list">
+                          <div class="service-desc-l2 grey-out" onClick="setServiceMenu(2)">
+                            <div class="services-desc-title"><div class="services-desc-title-text">3D Printers</div></div>
+                            <div class="services-desc-desc"><div class="services-desc-desc-text">Create authentic models that cannot be found anywhere else</div></div>
+                          </div>
+                        </li>
+                        <li class="service-list">
+                          <div class="service-desc-l3 grey-out" onClick="setServiceMenu(3)">
+                            <div class="services-desc-title"><div class="services-desc-title-text">Woodworking Tools</div></div>
+                            <div class="services-desc-desc"><div class="services-desc-desc-text">Saw? Sander? All within your reach.</div></div>
+                          </div>
+                        </li>
+                        <li class="service-list">
+                          <div class="service-desc-l4 grey-out" onClick="setServiceMenu(4)">
+                            <div class="services-desc-title"><div class="services-desc-title-text">Circuit Board Etching</div></div>
+                            <div class="services-desc-desc"><div class="services-desc-desc-text">Tools required to create high quality circuit boards</div></div>
+                          </div>
+                        </li>
+                      </ul>
+                      <a href="services.html" class="pill-button" style="margin-top: 0px;margin-left: 15%;">
+                        <span class="pill-text">More</span>
+                      </a>
+                    </div><!--
+                    --><div class="services-image">
+                        <div class="services-image-box">
+                            <div class="services-l1"></div>
+                            <div class="services-l2"></div>
+                            <div class="services-l3"></div>
+                            <div class="services-l4"></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="latest">
+              <div class="latest-content">
+                <div class="latest-container-box">
+                  <div class="latest-content_left">
+                    <div class="content-title">Our latest Bitcoin Miners!</div>
+                    <div class="content-desc" style="font-size: 15px">The only source of income barely keep CEC survive</div>
+                  </div>
+                  <div class="latest-content_right">
+                    <div class="content-title">Makeathon Malaysia</div>
+                    <div class="content-desc" style="font-size: 15px">Ensure that the bitcoin miners are functioning all the time</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <div class="footer-box">
+            <div class="footer-box-container">
+                <img src="./img/cec-logo-white.png"/>
+                <div class="footer-content-1">
+                    Creative Electronics Club
+                </div>
+                <div class="footer-content-15">
+                    Kampung Baru, 11400 Air Itam, Penang, Malaysia.
+                </div>
+                <div class="footer-content-2">
+                    SPONSORED BY A LOT OF AWESOME INDIVIDUALS
+                </div>
+                <div class="footer-content-3">
+                <a style="color:white;">DESIGN BY CEC OFFICIAL</a>
+                </div>
+                <div class="footer-content-links">
+                    <a href="https://www.facebook.com/clphscec/" target="_blank"><img src="./img/FACEBOOK.svg"/></a>
+                    <a href="mailto:cec.clphs@gmail.com" target="_blank"><img class="invert" src="./img/MAIL.svg"/></a>
+                </div>
+            </div>
+        </div>
+        <div id="snackbar"></div>
+        <script src="./script/ScrollMagic.min.js"></script>
+        <script src="./script/jquery.fittext.js"></script>
+        <script src="./script/debug.addIndicators.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+        <script src="./script/index.js"></script>
+        <script>
+          jQuery(".services-desc-title-text").fitText(1.4,{ minFontSize: '20px', maxFontSize: '40px' });
+          jQuery(".services-desc-desc-text").fitText(1.6,{ minFontSize: '1px', maxFontSize: '20px' });
+          jQuery(".about-history").fitText(1,{ minFontSize: '10px', maxFontSize: '40px' });
+          jQuery(".goal-text").fitText(1,{ minFontSize: '30px', maxFontSize: '60px' });
+          jQuery(".contact-title").fitText(0.4,{ minFontSize: '40px', maxFontSize: '75px' });
+          jQuery(".contact-desc").fitText(1.3,{ minFontSize: '10px', maxFontSize: '20px' });
+          jQuery(".contact-address").fitText(1.3,{ minFontSize: '14px', maxFontSize: '24px' });
+          jQuery(".content-title").fitText(1.2,{ minFontSize: '35px', maxFontSize: '50px' });
+          jQuery(".content-desc").fitText(1.5,{ minFontSize: '15px', maxFontSize: '30px' });
+          jQuery(".home-title").fitText(1.2,{ minFontSize: '50px', maxFontSize: '80px' });
+          jQuery(".home-desc").fitText(2.5,{ minFontSize: '20px', maxFontSize: '30px' });
+        </script>
+    </body>
+</html>
